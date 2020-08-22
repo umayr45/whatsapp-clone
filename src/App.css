@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+*{
+  padding:0;
+  margin:0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app{
+  background-color: #dadbd3;
+  height: 100vh;
+  place-items: center;
+  display: grid;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__body{
   display: flex;
+  background-color:#ededed;
+  margin-top: -50px;
+  height: 90vh;
+  width: 90vw;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+}
+.sidebar{
+  flex:0.35;
+  display:flex;
   flex-direction: column;
+}
+.sidebar__header{
+  display: flex;
+  justify-content: space-between;
+  border-right: solid 1px lightgray;
+}
+.sidebar__headerRight{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  min-width: 10vw;
 }
-
-.App-link {
-  color: #61dafb;
+.sidebar__headerRight > .MuiSvgIcon-root{
+  margin-right: 2vw;
+  font-size: 24px !important
 }
+.sidebar__searchContainer > .MuiSvgIcon-root{
+  color: gray;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.sidebar__searchContainer > input{
+  border: none;
+  
+  margin-left: 10px;
+}
+.sidebar__search{
+  background-color:#f6f6f6;
+  display:flex;
+  height: 39px;
+  padding: 5px;
+}
+.sidebar__searchContainer{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  height: 35px;
+  width: 100%;
+
+}
+#sidebar__chats{
+  flex:1;
+  background-color:white;
+  overflow: scroll;
 }
